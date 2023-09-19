@@ -3,6 +3,7 @@
 
     --color-white: #ffffff;
     --color-black: #000000;
+    --color-gray: #343434;
 }
 
 .container{
@@ -29,6 +30,28 @@
 .text-uppercase{
     text-transform: uppercase;
 }
+.text-left{
+    text-align: left;
+}
+.text-right{
+    text-align: right;
+}
+.text-center{
+    text-align: center;
+}
+.title-simple{
+    font-size: 2em;
+    font-weight: 500;
+}
+.w-100{
+    width: 100%;
+}
+.bg-black{
+    background-color: var(--color-black);
+}
+.bg-white{
+    background-color: var(--color-white);
+}
 .btn-white{
     background-color: var(--color-white);
     padding: 8px 10px;
@@ -46,6 +69,15 @@
     line-height: 1em;
     margin-bottom: 40px;
 }
+.title-md{
+    font-size: 6em;
+    font-weight: 500;
+    line-height: 1em;
+}
+.text-lg{
+    font-size: 1.8em;
+    font-weight: 400;
+}
 .color-white{
     color: var(--color-white);
 }
@@ -55,8 +87,27 @@
 .color-red{
     color: var(--color-main);
 }
-
-
+.b-bottom-red{
+    font-weight: 300;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--color-main);
+}
+.space-border-gray{
+    position: relative;
+    padding: 30px;
+    background-color: var(--color-black);
+}
+.space-border-gray::before{
+    content: "";
+    width: calc(100% - 60px);
+    height: 2px;
+    background-color: var(--color-gray);
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    bottom: 30px;
+}
+/* ==================================== */
 
 
 .content_hero{
@@ -112,4 +163,180 @@ nav.menu ul li a{
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
+}
+.content_method{
+    height: 100%;
+    padding: 10px 160px;
+}
+.left_method{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-around;
+}
+.left_method h2{
+    width: 100%;
+}
+.list_method{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: -80px;
+}
+.list_method li{
+    width: 100%;
+    
+}
+.list_method li span{
+    text-align: left;
+    color: var(--color-white);
+    font-size: 4em;
+    border-bottom: 1px solid var(--color-main);
+}
+.right_method{
+    height: 100%;
+    align-content: center;
+}
+.right_method p{
+    width: 80%;
+    margin-bottom: 40px;
+}
+.list_clientes{
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.list_clientes img{
+    width: 13%;
+    height: auto;
+}
+.content_clientes{
+    padding: 0 80px;
+}
+
+
+.section_clientes{
+    padding: 80px 10px;
+}
+
+.content_services{
+    padding: 120px 80px 100px;
+}
+.over_title_services{
+    align-items: flex-start;
+}
+.left_body_services{
+    padding: 80px 10px;
+}
+.list_services{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 10px;
+}
+.list_services li{
+    width: 100%;
+    font-size: 5em;
+    font-weight: 500;
+    color: var(--color-white);
+    filter: brightness(30%);
+    transition: all .23s;
+    cursor: pointer;
+}
+.list_services li:hover{
+    filter: brightness(60%);
+}
+.list_services li.active{
+    filter: brightness(100%)!important;
+}
+
+.right_body_services{
+    padding: 80px 10px;
+}
+.card_service{
+    padding: 20px 0 40px;
+    border-bottom: 1px solid var(--color-gray);
+}
+.card_service h3{
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: 400;
+    width: 85%;
+}
+.card_service p{
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.bottom_services{
+    padding: 80px 10px 0;
+}
+.bottom_services h2{
+    width: 60%;
+    margin: auto;
+}
+.bottom_services h2 img{
+    height: 120px;
+    margin-bottom: -30px;
+}
+.link_bottom_services{
+    padding: 40px 0;
+}
+
+.over_title_blog{
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.content_blog{
+    padding: 100px 10px;
+}
+.head_footer{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+.content_footer p, .content_footer ul, .content_footer a{
+    color: var(--color-white);
+    font-size: .9em;
+    font-weight: 300;
+}
+.col_footer{
+    padding: 10px;
+}
+
+.list_social{
+    display: flex;
+    align-items: center;
+}
+.list_social li{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.list_social li a{
+    margin: auto;
+    display: flex;
+    font-size: 1.5em;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 50%;
+    color: var(--color-main);
+    background-color: var(--color-gray);
+}
+.list_social li a i{
+    margin: auto;
+}
+.content_footer{
+    padding: 40px 10px 20px;
+}
+.bottom_footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 0 0;
 }
