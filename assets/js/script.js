@@ -1,0 +1,43 @@
+$(document).ready(function(){
+
+    $(".carousel_project").owlCarousel({
+        loop:true,
+        margin:0,
+        nav:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+
+    $(".list_posts").owlCarousel({
+        loop:true,
+        margin:0,
+        nav:true,
+        autoplay:true,
+        autoplayTimeout:2000,
+        autoplayHoverPause:true,
+        responsive:{
+            0:{
+                items:1
+            },
+            600:{
+                items:2
+            },
+            1000:{
+                items:3
+            }
+        }
+    });
+
+});
