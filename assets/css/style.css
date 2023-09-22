@@ -182,6 +182,9 @@
 .p-20{
     padding: 20px 0;
 }
+.p-10{
+    padding: 10px;
+}
 /* ==================================== */
 
 
@@ -213,7 +216,9 @@ header.header{
 nav.menu{
     display: flex;
     align-items: center;
+    justify-content: space-between;
     padding: 0 20px;
+    width: calc(100% - 220px);
 }
 nav.menu ul{
     display: flex;
@@ -222,14 +227,20 @@ nav.menu ul li a{
     padding: 2px 10px;
     color: var(--color-black);
 }
-
+.left_header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .hero{
-    background-image: url(../img/hero-red-bg.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
+    width: 100%;
     background-color: var(--color-main);
+    display: flex;
 }
 
 .method{
@@ -445,6 +456,38 @@ nav.menu ul li a{
 
 
 /* ============================== carousel ==================================== */
+
+/* ================================= slide hero ================================= */
+.slide_hero{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    background-color: var(--color-main);
+    width: 100%;
+    position: relative;
+}
+.carousel_hero{
+    
+}
+.carousel_hero .owl-dots{
+    position: absolute;
+    left: 0;
+    bottom: 80px;
+    padding: 10px;
+}
+.carousel_hero .owl-dots button{
+    width: 80px;
+    height: 3px;
+    margin-right: 10px;
+    background-color: var(--color-white);
+}
+.carousel_hero .owl-dots button.active{
+    background-color: var(--color-black);
+}
+/* ================================= slide hero ================================= */
+
+
 
 /* ============================ carousel projects ============================= */
 .section_carousel{
@@ -823,4 +866,353 @@ nav.menu ul li a{
 }
 .head_post{
     margin-bottom: 60px;
+}
+/* =========================================== page post ===================================== */
+
+
+
+.btn_menu_mobile, .section_carousel_mobile, .head_menu_mobile{
+    display: none;
+}
+
+@media(max-width: 1366px){
+    .title-lg{
+        font-size: 8em;
+    }
+    .title-md{
+        font-size: 5em;
+    }
+    .list_method li span{
+        font-size: 3em;
+    }
+    .right_method p{
+        font-weight: 400;
+    }
+    .text-lg{
+        font-size: 1.6em;
+    }
+    .list_services li{
+        font-size: 4em;
+    }
+    .card_post.card_post_slide img{
+        height: 280px;
+    }
+}
+
+@media(max-width: 1200px){
+
+}
+
+@media(max-width: 1080px){
+    nav.menu{
+        display: none;
+    }
+    .btn_menu_mobile{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-content: space-around;
+        width: 32px;
+        height: 32px;
+        cursor: pointer;
+    }
+    .btn_menu_mobile .rec{
+        width: 75%;
+        height: 3px;
+        background-color: var(--color-black);
+    }
+    .btn_menu_mobile .rec:nth-child(2){
+        width: 100%;
+    }
+    .head_menu_mobile{
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px;
+    }
+    .btn_close_menu{
+        background-color: transparent;
+        border: none;
+        color: var(--color-black);
+    }
+    .btn_close_menu i{
+        font-size: 1.4em;
+    }
+    nav.menu{
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        justify-content: center;
+        position: fixed;
+        padding-top: 80px;
+        top: -110%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--color-main);
+        z-index: 1;
+        box-shadow: 2px 2px 10px rgba(10, 10, 10, .5);
+        transition: all .3s;
+    }
+    .link_logo_fixed{
+        z-index: 100;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+    .open_menu_mobile{
+        top: 0!important;
+    }
+    nav.menu ul{
+        display: flex;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    nav.menu ul li{
+        width: 100%;
+        text-align: center;
+        display: flex;
+    }
+    nav.menu ul li a{
+        padding: 10px;
+        width: 100%;
+    }
+    .title-lg{
+        font-size: 6em;
+    }
+    .card_project.card_project_slide{
+        height: 680px!important;
+    }
+    .text-lg{
+        font-size: 1.3em;
+    }
+    .btn_view_project{
+        right: -40px;
+        width: 70px;
+        height: 70px;
+    }
+    .btn_view_project::before{
+        width: 54px;
+        height: 54px;
+        top: 2px;
+        left: 2px;
+    }
+    .btn_view_project a{
+        font-size: .8em;
+    }
+    .list_clientes img{
+        width: 33%;
+    }
+    .title-md{
+        font-size: 4em;
+    }
+    .bottom_services h2 img{
+        height: 75px;
+        margin-bottom: -10px;
+    }
+    .card_post.card_post_slide img{
+        height: 200px;
+    }
+    .head_card_post{
+        display: flex;
+        align-items: flex-start;
+    }
+    .head_card_post h2 a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 900px){
+    .title-lg{
+        font-size: 5em;
+    }
+    .content_method{
+        padding: 10px;
+    }
+    .hero_left{
+        align-content: flex-start;
+    }
+    .slide_hero{
+        align-content: flex-start;
+        padding-top: 160px;
+    }
+    .carousel_hero .owl-dots{
+        bottom: 40%;
+    }
+}
+
+@media(max-width: 768px){
+    .f-50, .f-40, .f-60, .f-33{
+        flex-basis: 100%;
+    }
+    .method, .right_method, .left_method{
+        height: auto;
+    }
+    .list_method{
+        margin: 30px 0;
+    }
+    .content_method{
+        padding: 80px 10px;
+    }
+    .method{
+        background-image: unset;
+    }
+    .title-md{
+        font-size: 3.5em;
+    }
+    .list_method li{
+        width: auto;
+        padding-right: 10px;
+    }
+    .text-lg{
+        font-size: 1.2em;
+    }
+    .card_project.card_project_slide{
+        height: 580px!important;
+    }
+    .arrow_card_project{
+        margin: 20px 0;
+    }
+    .list_cat_card_project span{
+        font-size: .9em;
+    }
+    .over_title_services{
+        margin-bottom: 30px;
+    }
+    .content_services{
+        padding: 80px 10px;
+    }
+    .left_body_services{
+        padding: 20px 0;
+    }
+    .list_services li{
+        font-size: 3em;
+    }
+    .right_body_services{
+        padding: 30px 0;
+    }
+    .over_title_blog{
+        margin-bottom: 30px;
+    }
+    .section_carousel{
+        display: none;
+    }
+    .section_carousel_mobile{
+        display: flex;
+        position: unset;
+    }
+    .carousel_project_mobile .card_project{
+        flex-wrap: wrap;
+        height: auto!important;
+        background-color: var(--color-black);
+        padding-bottom: 30px;
+    }
+    .carousel_project_mobile .card_project img{
+        width: 100%;
+    }
+    .carousel_project_mobile .card_project .content_card_project{
+        opacity: 1;
+        width: 100%;
+    }
+    .carousel_project_mobile .btn_view_project{
+        display: none;
+    }
+    .marquee_title{
+        position: unset;
+        width: 100%;
+        white-space: unset;
+        opacity: 1;
+        font-size: 1.8em;
+        padding: 10px;
+    }
+    .carousel_project_mobile .card_project:hover::before{
+        display: none
+    }
+    .carousel_project_mobile .card_project img{
+        margin-bottom: 30px;
+    }
+    .carousel_project_mobile .card_project.card_project_slide{
+        margin: 0;
+    }
+    .arrow_card_project i{
+        font-size: 1.5em;
+    }
+    .list_method li span{
+        font-size: 2em;
+    }
+    .content_card_project p{
+        margin-bottom: 20px;
+    }
+    .list_clientes img{
+        width: 50%;
+    }
+    .content_clientes{
+        padding: 10px;
+    }
+    .info_card_post{
+        flex-wrap: wrap;
+    }
+    .info_card_post h2{
+        text-align: left;
+        width: 100%;
+    }
+    .head_card_post{
+        margin-top: 10px;
+    }
+    .info_card_post div{
+        width: 100%;
+    }
+    .col_footer{
+        padding: 20px 0px;
+    }
+    .field_logo_footer{
+        margin-bottom: 30px;
+    }
+    .field_logo_footer p{
+        margin-bottom: 20px;
+    }
+    .list_social li a{
+        margin: 0;
+        margin-right: 10px;
+    }
+    .bottom_footer p{
+        margin-bottom: 20px;
+    }
+}
+
+@media(max-width: 500px){
+    .title-lg{
+        font-size: 3.5em;
+    }
+    .bottom_services h2{
+        width: 90%;
+    }
+}
+
+@media(max-width: 420px){
+    .title-lg{
+        font-size: 3em;
+    }
+    .title-md{
+        font-size: 3.2em;
+    }
+    .right_method p{
+        width: 100%;
+        font-weight: 400;
+    }
+    .slide_hero{
+        padding-top: 120px;
+    }
+    .bottom_services h2 img{
+        width: 50px;
+        height: 50px;
+    }
+    .content_blog{
+        padding: 60px 10px;
+    }
+    
 }
